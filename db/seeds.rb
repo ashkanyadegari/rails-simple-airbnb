@@ -13,7 +13,7 @@
   Flat.destroy_all
   100.times do
     flat = Flat.create(name: Faker::Artist.name , address: Faker::Address.street_address , description: Faker::Hipster.sentence,
-      price_per_night: rand(50..295), number_of_guests: rand(1..6)
+      price_per_night: rand(50..295), number_of_guests: rand(1..6), image: "https://picsum.photos/500/350"
  )
   flat.save
   puts "#{flat.name}"

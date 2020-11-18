@@ -1,15 +1,16 @@
-<h1>All our flats</h1>
-<p>All <%= @flats.count  %> flats</p>
+
 
 
 <div class="album py-5 bg-light">
     <div class="container">
+    <h1>All our flats</h1>
+    <p>All <%= @flats.count  %> flats</p>
 
       <div class="row">
         <% @flats.each do |flat| %>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="card mb-4 shadow-sm">
-            <img src="https://picsum.photos/500/350" class="card-img-top" alt="...">
+            <img src="<%= flat.image %>" class="card-img-top rounded-lg" alt="...">
             <div class="card-body">
               <h5 class="card-title"><%= flat.name %></h5>
               <p class="card-text"><%= flat.description %></p>
@@ -19,9 +20,9 @@
               <li class="list-group-item">No. People: <%= flat.number_of_guests %></li>
             </ul>
             <div class="card-body">
-              <%= link_to 'More Info', flat, :class => "card-link btn btn-primary" %>
-              <%= link_to 'Edit', edit_flat_path(flat.id), :class => "card-link btn btn-info"  %>
-              <%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' }, :class => "card-link btn btn-danger" %>
+              <%= link_to 'More Info', flat %>
+              <%= link_to 'Edit', edit_flat_path(flat.id)  %>
+              <%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
           </div>
         </div>
