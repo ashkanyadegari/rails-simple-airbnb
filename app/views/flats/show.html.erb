@@ -1,0 +1,45 @@
+<div class="map" style="background-image: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200')">
+<div class="flat-body">
+<div class="row main-info">
+<div class="container d-flex justify-content-even">
+<div class="flat-name col-md-8 bg-white">
+  <h1><%= @flat.name %></h1>
+  <p> <%= @flat.address %></p>
+</div>
+
+
+<div class="flat-show-card col-md-4 bg-white">
+        <h5>Book this place!</h5>
+
+        <form action="">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="From: 12/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mt-2">
+            <input type="text" class="form-control" placeholder="To: 18/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+        </form>
+</div>
+</div>
+
+</div>
+<div class="container d-flex justify-content-even">
+
+<div class="row mt-5">
+<div class="flat-info col-md-8 bg-white">
+  <h2>A bit more about this flat</h2>
+  <p> <%= @flat.description %></p>
+</div>
+
+<div class="flat-pricings col-md-4 bg-white">
+  <h2>Details</h2>
+  <p>Price:  <%= @flat.price_per_night %></p>
+  <p>No. Guests:  <%= @flat.number_of_guests %></p>
+</div>
+</div>
+
+</div>
+</div>
+
+
